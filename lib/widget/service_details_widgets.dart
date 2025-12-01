@@ -149,7 +149,6 @@ class AdditionalInfoSections extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // // الموقع
         // _InfoCard2(
         //   title: 'الموقع',
         //   child: Container(

@@ -65,7 +65,7 @@ Widget buildSearchButton() {
         ),
         const SizedBox(width: 10),
         const SizedBox(
-          width: 180, // عرض مربع النص
+          width: 180,
           child: TextField(
             textAlign: TextAlign.right,
             decoration: InputDecoration(

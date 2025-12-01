@@ -29,9 +29,10 @@ class BeautyMoreScreen extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  width: double.infinity,
+                  //width: double.infinity,
                   color: const Color.fromARGB(255, 234, 230, 240),
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+                 // padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+                 padding: EdgeInsets.only(top: 40),
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -56,99 +57,99 @@ class BeautyMoreScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      SizedBox(height: 150),
+                      SizedBox(height: 40),
                     ],
                   ),
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 120),
-                    child: Card(
-                      color: AppConstants.backgroundColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      elevation: 5,
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Obx(
-                          () => Column(
-                            children: List.generate(
-                              controller.buttonTitles.length,
-                              (index) {
-                                if (index == 0) {
-                                  return Padding(
-                                    padding: const EdgeInsets.symmetric(vertical: 5),
-                                    child: Container(
-                                      height: 50,
-                                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                                      decoration: BoxDecoration(
-                                        color: AppConstants.backgroundColor,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Colors.grey.shade300),
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          Expanded(
-                                            child: TextField(
-                                              decoration: const InputDecoration(
-                                                hintText:AppConstants.searchHint,
-                                                border: InputBorder.none,
-                                              ),
-                                              onChanged: controller.updateSearch,
-                                              textAlign: TextAlign.center,
-                                            ),
-                                          ),
-                                          const Icon(Icons.search, color: AppConstants.greyColor),
-                                        ],
-                                      ),
-                                    ),
-                                  );
-                                } else {
-                                  return Padding(
-                                    padding: const EdgeInsets.symmetric(vertical: 5),
-                                    child: SizedBox(
-                                      width: double.infinity,
-                                      height: 50,
-                                      child: ElevatedButton(
-                                        onPressed: () =>
-                                            controller.selectButton(index),
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor:
-                                              controller.selectedButtonIndex.value ==
-                                                      index
-                                                  ? AppConstants.primaryColor
-                                                  :  AppConstants.lightGreyBackground,
-                                          foregroundColor:
-                                              controller.selectedButtonIndex.value ==
-                                                      index
-                                                  ? AppConstants.backgroundColor
-                                                  : AppConstants.textColor,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                          ),
-                                          elevation: 2,
-                                        ),
-                                        child: Text(
-                                          controller.buttonTitles[index],
-                                          textAlign: TextAlign.center,
-                                          style: const TextStyle(fontSize: 16),
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                }
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                //Padding(
+                 // padding: const EdgeInsets.symmetric(horizontal: 20),
+                  //child: Container(
+                 //   margin: const EdgeInsets.only(top: 120),
+                    // child: Card(
+                    //   color: AppConstants.backgroundColor,
+                    //   shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(20),
+                    //   ),
+                    //   elevation: 5,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.all(20),
+                    //     child: Obx(
+                    //       () => Column(
+                    //         children: List.generate(
+                    //           controller.buttonTitles.length,
+                    //           (index) {
+                    //             if (index == 0) {
+                    //               return Padding(
+                    //                 padding: const EdgeInsets.symmetric(vertical: 5),
+                    //                 child: Container(
+                    //                   height: 50,
+                    //                   padding: const EdgeInsets.symmetric(horizontal: 10),
+                    //                   decoration: BoxDecoration(
+                    //                     color: AppConstants.backgroundColor,
+                    //                     borderRadius: BorderRadius.circular(10),
+                    //                     border: Border.all(color: Colors.grey.shade300),
+                    //                   ),
+                    //                   child: Row(
+                    //                     children: [
+                    //                       Expanded(
+                    //                         child: TextField(
+                    //                           decoration: const InputDecoration(
+                    //                             hintText:AppConstants.searchHint,
+                    //                             border: InputBorder.none,
+                    //                           ),
+                    //                           onChanged: controller.updateSearch,
+                    //                           textAlign: TextAlign.center,
+                    //                         ),
+                    //                       ),
+                    //                       const Icon(Icons.search, color: AppConstants.greyColor),
+                    //                     ],
+                    //                   ),
+                    //                 ),
+                    //               );
+                    //             } else {
+                    //               return Padding(
+                    //                 padding: const EdgeInsets.symmetric(vertical: 5),
+                    //                 child: SizedBox(
+                    //                   width: double.infinity,
+                    //                   height: 50,
+                    //                   child: ElevatedButton(
+                    //                     onPressed: () =>
+                    //                         controller.selectButton(index),
+                    //                     style: ElevatedButton.styleFrom(
+                    //                       backgroundColor:
+                    //                           controller.selectedButtonIndex.value ==
+                    //                                   index
+                    //                               ? AppConstants.primaryColor
+                    //                               :  AppConstants.lightGreyBackground,
+                    //                       foregroundColor:
+                    //                           controller.selectedButtonIndex.value ==
+                    //                                   index
+                    //                               ? AppConstants.backgroundColor
+                    //                               : AppConstants.textColor,
+                    //                       shape: RoundedRectangleBorder(
+                    //                         borderRadius:
+                    //                             BorderRadius.circular(10),
+                    //                       ),
+                    //                       elevation: 2,
+                    //                     ),
+                    //                     child: Text(
+                    //                       controller.buttonTitles[index],
+                    //                       textAlign: TextAlign.center,
+                    //                       style: const TextStyle(fontSize: 16),
+                    //                     ),
+                    //                   ),
+                    //                 ),
+                    //               );
+                    //             }
+                    //           },
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
+                 // ),
+               // ),
               ],
             ),
 
@@ -172,104 +173,102 @@ class BeautyMoreScreen extends StatelessWidget {
                 return Column(
                   children: centers.map((center) {
                     return Card(
-                      margin: const EdgeInsets.only(bottom: 15),
+  margin: const EdgeInsets.only(bottom: 20),
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(40),
+  ),
+  elevation: 5,
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      ClipRRect(
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+        child: Image.asset(
+          center['image'] ?? 'images/default.jpg',
+          height: 160,
+          width: double.infinity,
+          fit: BoxFit.cover,
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              center['title'] ?? '',
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: AppConstants.textColor,
+              ),
+            ),
+            const SizedBox(height: 5),
+            Text(
+              center['services'] ?? '',
+              style: const TextStyle(
+                fontSize: 14,
+                color: Colors.black87,
+              ),
+            ),
+            const SizedBox(height: 5),
+            Text(
+              center['location'] ?? '',
+              style: const TextStyle(
+                fontSize: 14,
+                color: Colors.black54,
+              ),
+            ),
+            const SizedBox(height: 15),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppConstants.primaryColor,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      elevation: 3,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                            borderRadius:
-                                const BorderRadius.vertical(top: Radius.circular(15)),
-                            child: Image.asset(
-                              center['image'] ?? 'images/default.jpg',
-                              height: 150,
-                              width: double.infinity,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  center['title'] ?? '',
-                                  style: const TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: AppConstants.textColor,
-                                  ),
-                                ),
-                                const SizedBox(height: 5),
-                                Text(
-                                  center['services'] ?? '',
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                                const SizedBox(height: 5),
-                                Text(
-                                  center['location'] ?? '',
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.black54,
-                                  ),
-                                ),
-                                const SizedBox(height: 10),
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: ElevatedButton(
-                                        onPressed: () {},
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor: AppConstants.primaryColor,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(10),
-                                          ),
-                                        ),
-                                        child: const Text(
-                                          AppConstants.bookNow,
-                                          style: TextStyle(
-                                            color: AppConstants.backgroundColor,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(width: 10),
-                                    Expanded(
-                                      child: OutlinedButton(
-                                        onPressed: () {
-                                          Get.to(() =>  SalonDetailsScreen());
-                                        },
-                                        style: OutlinedButton.styleFrom(
-                                          side: const BorderSide(
-                                            color: AppConstants.primaryColor,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(10),
-                                          ),
-                                        ),
-                                        child: const Text(
-                                          AppConstants.details,
-                                          style: TextStyle(
-                                            color: AppConstants.primaryColor,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                    ),
+                    child: const Text(
+                      AppConstants.bookNow,
+                      style: TextStyle(
+                        color: AppConstants.backgroundColor,
+                        fontWeight: FontWeight.bold,
                       ),
-                    );
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Get.to(() => SalonDetailsScreen());
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: const BorderSide(color: AppConstants.primaryColor),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text(
+                      AppConstants.details,
+                      style: TextStyle(
+                        color: AppConstants.primaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    ],
+  ),
+);
+
                   }).toList(),
                 );
               }),
